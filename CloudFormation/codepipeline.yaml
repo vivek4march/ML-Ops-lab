@@ -176,7 +176,7 @@ Resources:
       Environment:
         Type: LINUX_CONTAINER
         ComputeType: BUILD_GENERAL1_SMALL
-        Image: aws/codebuild/python:3.5
+        Image: aws/codebuild/python:3.6.5
       Source:
         Type: CODEPIPELINE
         BuildSpec: !Sub |
@@ -214,7 +214,7 @@ Resources:
       Environment:
         Type: LINUX_CONTAINER
         ComputeType: BUILD_GENERAL1_SMALL
-        Image: aws/codebuild/python:3.6
+        Image: aws/codebuild/python:3.6.5
       Source:
         Type: CODEPIPELINE
         BuildSpec: !Sub |
@@ -223,7 +223,7 @@ Resources:
             install:
               commands:
                 - echo "Installing boto3 and sagemaker"
-		- pip install --upgrade pip
+            		- pip install --upgrade pip
                 - pip3 install boto3
                 - pip install --upgrade pip
                 - pip3 install sagemaker
@@ -244,7 +244,7 @@ Resources:
       Environment:
         Type: LINUX_CONTAINER
         ComputeType: BUILD_GENERAL1_SMALL
-        Image: aws/codebuild/python:3.6
+        Image: aws/codebuild/python:3.6.5
       Source:
         Type: CODEPIPELINE
         BuildSpec: !Sub |
@@ -254,7 +254,7 @@ Resources:
               commands:
                 - echo "Installing boto3 and sagemaker"
                 - pip3 install boto3
-		- pip install --upgrade pip
+                - pip install --upgrade pip
                 - pip3 install sagemaker
             build:
               commands:
